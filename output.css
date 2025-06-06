@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -200,9 +201,6 @@
   .mt-2\.5 {
     margin-top: calc(var(--spacing) * 2.5);
   }
-  .mr-10 {
-    margin-right: calc(var(--spacing) * 10);
-  }
   .mr-20 {
     margin-right: calc(var(--spacing) * 20);
   }
@@ -211,12 +209,6 @@
   }
   .mb-2\.5 {
     margin-bottom: calc(var(--spacing) * 2.5);
-  }
-  .ml-2 {
-    margin-left: calc(var(--spacing) * 2);
-  }
-  .ml-10 {
-    margin-left: calc(var(--spacing) * 10);
   }
   .ml-20 {
     margin-left: calc(var(--spacing) * 20);
@@ -260,6 +252,9 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .resize {
     resize: both;
   }
@@ -292,6 +287,39 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .bg-\[17\,17\,17\] {
+    background-color: 17,17,17;
+  }
+  .bg-\[black\] {
+    background-color: black;
+  }
+  .bg-\[rg17\,17\,17\] {
+    background-color: rg17,17,17;
+  }
+  .bg-\[rgb\(\)\)\] {
+    background-color: rgb();
+  }
+  .bg-\[rgb\(\)\] {
+    background-color: rgb();
+  }
+  .bg-\[rgb\(17\,17\)\] {
+    background-color: rgb(17,17);
+  }
+  .bg-\[rgb\(17\,17\,1\)\] {
+    background-color: rgb(17,17,1);
+  }
+  .bg-\[rgb\(17\,17\,17\)\] {
+    background-color: rgb(17,17,17);
+  }
+  .bg-\[rgb\(17\,17\,1111117\)\] {
+    background-color: rgb(17,17,1111117);
+  }
+  .bg-\[rgb17\,17\,17\] {
+    background-color: rgb17,17,17;
+  }
+  .bg-\[rgb\] {
+    background-color: rgb;
+  }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
   }
@@ -319,10 +347,6 @@
   .font-sans {
     font-family: var(--font-sans);
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -340,10 +364,6 @@
   }
   .text-\[4rem\] {
     font-size: 4rem;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
@@ -366,6 +386,20 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .hover\:bg-amber-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-amber-300);
+      }
+    }
+  }
+  .hover\:text-amber-300 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-amber-300);
+      }
+    }
   }
 }
 @property --tw-border-style {
