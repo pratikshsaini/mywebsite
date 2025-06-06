@@ -5,6 +5,7 @@
   :root, :host {
     --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-200: oklch(92.4% 0.12 95.746);
@@ -14,15 +15,12 @@
     --spacing: 0.25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-9xl: 8rem;
     --text-9xl--line-height: 1;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -279,6 +277,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -287,44 +288,11 @@
     --tw-border-style: solid;
     border-style: solid;
   }
-  .bg-\[17\,17\,17\] {
-    background-color: 17,17,17;
-  }
-  .bg-\[black\] {
-    background-color: black;
-  }
-  .bg-\[rg17\,17\,17\] {
-    background-color: rg17,17,17;
-  }
-  .bg-\[rgb\(\)\)\] {
-    background-color: rgb();
-  }
-  .bg-\[rgb\(\)\] {
-    background-color: rgb();
-  }
-  .bg-\[rgb\(17\,17\)\] {
-    background-color: rgb(17,17);
-  }
-  .bg-\[rgb\(17\,17\,1\)\] {
-    background-color: rgb(17,17,1);
-  }
   .bg-\[rgb\(17\,17\,17\)\] {
     background-color: rgb(17,17,17);
   }
-  .bg-\[rgb\(17\,17\,1111117\)\] {
-    background-color: rgb(17,17,1111117);
-  }
-  .bg-\[rgb17\,17\,17\] {
-    background-color: rgb17,17,17;
-  }
-  .bg-\[rgb\] {
-    background-color: rgb;
-  }
   .bg-amber-200 {
     background-color: var(--color-amber-200);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
@@ -344,8 +312,14 @@
   .text-right {
     text-align: right;
   }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
   .font-sans {
     font-family: var(--font-sans);
+  }
+  .font-serif {
+    font-family: var(--font-serif);
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -386,13 +360,6 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
-  }
-  .hover\:bg-amber-300 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-amber-300);
-      }
-    }
   }
   .hover\:text-amber-300 {
     &:hover {
